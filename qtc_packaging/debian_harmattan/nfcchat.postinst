@@ -1,0 +1,12 @@
+#!/bin/sh
+
+dbus-send --system --type=method_call --print-reply --dest=com.nokia.nfc / \
+        com.nokia.nfc.Manager.RegisterNDEFHandler \
+        string:session \
+        string:com.nokia.qtmobility.nfc.nfcchat \
+        objpath:/com/nokia/nfc/ndefhandler \
+        string:any \
+        string:"'urn:nfc:ext:nokia.com:nfcchat','*'[0:1];" \
+        string:nfcchat \
+|| echo 'Failed to register autostart ndef handler'
+

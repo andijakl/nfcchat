@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=com.nokia.qtmobility.nfc.nfcchat
+Exec=/usr/bin/invoker -S /opt/nfcchat/splash-nfcchat-p.png -L /opt/nfcchat/splash-nfcchat-l.png --type=e --single-instance /opt/nfcchat/bin/nfcchat
+User=user

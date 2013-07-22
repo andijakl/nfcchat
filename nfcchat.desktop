@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=NfcChat
+Exec=/usr/bin/invoker -S /opt/nfcchat/splash-nfcchat-p.png -L /opt/nfcchat/splash-nfcchat-l.png --type=e --single-instance /opt/nfcchat/bin/nfcchat
+Icon=/opt/nfcchat/nfcchat80.png
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable

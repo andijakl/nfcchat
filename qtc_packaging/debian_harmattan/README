@@ -1,0 +1,55 @@
+NfcChat
+-------
+
+Receive and send peer-to-peer NFC messages between two phones,
+or listen to and analyze data sent by other NFC devices!
+
+Start the application on two NFC-enabled Symbian phones or
+the N9 with MeeGo Harmattan. Make sure the connection settings
+match on both phones.
+
+Then, touch the two phones at their back, and keep them close
+together. Enter a message in the text box at the top of the
+chat page and press the send button to transmit the message
+to the other phone via NFC.
+
+Peer-to-Peer NFC Communication
+
+The Nfc Chat app uses the standardized LLCP protocol to send
+messages as well as to listen for incoming messages on a
+specified address. You can either use connection-less mode
+(specifying a port) or connection-oriented mode (using a URI).
+
+
+- In connection-less mode, all you need to configure is the
+port to use. If the same port is specified on both phones
+(default: 35), you’re ready to instantly send datagrams from
+one phone to the other, as soon as the phones discover each
+other.
+
+This mode is comparable to UDP: connection-less modes doesn’t
+ensure delivery, but are slightly faster (which might be an
+advantage for very quick touch transactions, given that NFC
+is in general not too fast and you will not transfer large
+amounts of data).
+
+
+- In connection-oriented mode, Nfc Chat allows a flexible
+configuration of the connection parameters. Most important is
+the URI, which is by default set to urn:nfc:xsn:nokia.com:nfcchat.
+Note that the format of the URI is standardized by the Nfc Forum –
+a custom URI has to start with urn:nfc:xsn:, to be followed by your
+domain name, a colon, and then your application name.
+
+Additionally, you can choose whether the phone should act as both
+a server and a client. In this case, Nfc Chat establishes two
+sockets, and you also need to select if the app should send
+messages through the server- or the client socket.
+
+If you only connect one socket – either a server- or a client
+socket, make sure the configuration on the other phone is inverse;
+it wouldn’t work to connect two clients to each other. In this case,
+one phone has to be the server, the other the client.
+
+
+ -- Andreas Jakl <>  Mon, 25 Jul 2011 13:35:05 +0300
